@@ -90,86 +90,17 @@ export const experience: ExperienceItem[] = [
   },
 ];
 
-export type PathologyItem = { name: string };
-
-export type InterventionCategory = {
-  id: string;
-  title: string;
-  items: PathologyItem[];
-};
-
-/** Áreas de intervención: títulos e ítems (solo nombres) */
-export const interventionCategories: InterventionCategory[] = [
-  {
-    id: "lenguaje",
-    title: "Lenguaje",
-    items: [
-      { name: "Trastorno del desarrollo del lenguaje (TDL)" },
-      { name: "Trastorno de la comunicación social (pragmático)" },
-      { name: "Trastornos del lenguaje asociados a otras condiciones" },
-    ],
-  },
-  {
-    id: "habla",
-    title: "Habla",
-    items: [
-      { name: "Trastorno de los sonidos del habla (TSH)" },
-      { name: "Apraxia del habla infantil" },
-      { name: "Disartria" },
-      { name: "Trastornos de la fluidez" },
-    ],
-  },
-  {
-    id: "voz",
-    title: "Voz",
-    items: [
-      { name: "Disfonía" },
-      { name: "Trastornos de resonancia" },
-    ],
-  },
-  {
-    id: "deglucion",
-    title: "Deglución",
-    items: [
-      { name: "Disfagia" },
-      { name: "Trastornos miofuncionales orofaciales" },
-    ],
-  },
-  {
-    id: "condiciones-medicas",
-    title: "Condiciones médicas que afectan la comunicación",
-    items: [
-      { name: "Trastorno del espectro autista (TEA)" },
-      { name: "Mutismo selectivo" },
-      { name: "TDAH" },
-      { name: "Discapacidad intelectual" },
-      { name: "Síndromes genéticos" },
-      { name: "Daño neurológico adquirido" },
-      { name: "Parálisis cerebral infantil (PCI)" },
-      { name: "Fisura labiopalatina" },
-      { name: "Parálisis facial" },
-      { name: "Enfermedades neurodegenerativas (p. ej. Parkinson, Alzheimer)" },
-    ],
-  },
-  {
-    id: "evolutivo",
-    title: "Evolutivo",
-    items: [{ name: "Hablante tardío" }],
-  },
-  {
-    id: "audicion",
-    title: "Audición",
-    items: [
-      { name: "Hipoacusia" },
-      { name: "Trastorno del procesamiento auditivo" },
-    ],
-  },
-  {
-    id: "aprendizaje",
-    title: "Aprendizaje / lenguaje escrito",
-    items: [{ name: "Trastorno específico del aprendizaje" }],
-  },
-];
+/** Patologías y ámbitos: listado plano (orden de presentación) */
+export const workAreaPathologies = [
+  "Hablante tardío",
+  "Trastorno del Desarrollo del Lenguaje",
+  "Trastorno de los Sonidos del Habla",
+  "Apraxia del habla infantil",
+  "Disartria",
+  "Trastornos de la fluidez",
+  "Trastorno del Espectro Autista",
+  "Trastorno específico del aprendizaje",
+] as const;
 
 export type BlogPost = {
   slug: string;
