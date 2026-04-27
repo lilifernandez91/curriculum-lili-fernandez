@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+:root {
+  --page-bg-solid: #faf7f1;
+}
+
+@theme inline {
+  --color-canvas: #faf7f1;
+  --color-section-soft: #f4efe6;
+  --color-forest: #17483b;
+  --color-forest-deep: #123f35;
+  --color-ink: #2a1b14;
+  --color-ink-muted: #514740;
+  --color-terracotta: #c96f4a;
+  --color-terracotta-light: #e8b29b;
+  --color-sage: #9bae9a;
+  --color-border: #e7d7c8;
+  --font-sans: var(--font-dm), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-cormorant), ui-serif, Georgia, serif;
+  --shadow-soft: 0 10px 30px -18px rgb(18 63 53 / 0.28);
+  --shadow-card: 0 10px 26px -18px rgb(42 27 20 / 0.35);
+}
+
+html {
+  scroll-behavior: smooth;
+  min-height: 100%;
+  background-color: var(--page-bg-solid);
+}
+
+body {
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 1.02rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100dvh;
+  background-color: var(--page-bg-solid);
+}
+
+main {
+  overflow-x: clip;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-serif);
+  letter-spacing: -0.01em;
+}
+
+a,
+button {
+  transition:
+    color 180ms ease,
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+@media (min-width: 640px) {
+  body {
+    font-size: 1.04rem;
+    line-height: 1.7;
+  }
+}
+
+::selection {
+  background: color-mix(in srgb, var(--color-terracotta-light) 70%, white);
+  color: var(--color-forest-deep);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-forest);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
