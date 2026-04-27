@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { MessageCircleMore } from "lucide-react";
+import { site } from "@/data/site";
 
 export function ContactSection() {
   return (
@@ -16,7 +17,7 @@ export function ContactSection() {
         </div>
 
         <Link
-          href="mailto:lilibetfdez@gmail.com"
+          href={`mailto:${site.email}`}
           className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-terracotta px-6 py-3 text-sm font-semibold text-white hover:-translate-y-0.5 hover:bg-[#b86242]"
         >
           <MessageCircleMore className="h-4 w-4" />

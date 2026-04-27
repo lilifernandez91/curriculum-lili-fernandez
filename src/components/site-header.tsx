@@ -26,17 +26,17 @@ export function SiteHeader() {
           className="flex min-w-0 items-center gap-3 text-forest-deep"
           aria-label="Inicio"
         >
-          <span className="relative flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-full border border-border bg-white p-1 shadow-soft">
+          <span className="relative flex h-14 w-14 shrink-0 items-center justify-center overflow-hidden rounded-full shadow-soft sm:h-16 sm:w-16">
             <Image
               src="/logo.png"
-              alt=""
-              width={120}
-              height={120}
-              className="h-full w-full object-contain object-center"
+              alt="Logo de Lili Fernández Logopeda"
+              width={160}
+              height={160}
+              className="h-full w-full object-cover"
               priority
             />
           </span>
-          <span className="min-w-0 text-left font-serif text-xl leading-none sm:text-2xl">
+          <span className="min-w-0 text-left font-serif text-lg leading-none sm:text-xl">
             {site.name}
             <span className="mt-1 block font-sans text-[10px] font-semibold uppercase tracking-[0.24em] text-ink-muted sm:text-[11px]">
               {site.title}

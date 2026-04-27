@@ -8,7 +8,8 @@ import { HeroSection } from "@/components/sections/hero-section";
 
 export const metadata: Metadata = {
   title: "Inicio",
-  description: "Logopeda: acompañamiento en lenguaje, habla y voz.",
+  description:
+    "Logopeda: acompañamiento en lenguaje, habla y comunicación. Consulta en español.",
 };
 
 export default function HomePage() {
