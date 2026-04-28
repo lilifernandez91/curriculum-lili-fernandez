@@ -15,14 +15,25 @@ export function AboutSection() {
 
         <div className="max-w-3xl">
           <p className="text-xs font-semibold uppercase tracking-[0.24em] text-terracotta">Sobre mí</p>
-          <h2 className="mt-2 text-5xl leading-none text-ink sm:text-6xl">{about.title}</h2>
+          <h2 className="mt-2 text-3xl leading-tight text-ink sm:text-4xl lg:text-5xl">{about.title}</h2>
           <span className="mt-3 block h-1 w-16 rounded-full bg-terracotta/90" aria-hidden />
 
-          <div className="mt-6 space-y-4 text-[1.04rem] leading-8 text-ink-muted">
+          <div className="mt-6 space-y-4 text-sm leading-relaxed text-ink-muted sm:text-base">
             {about.paragraphs.map((p) => (
               <p key={p}>{p}</p>
             ))}
           </div>
+
+          <ul className="mt-7 flex flex-wrap gap-2.5" role="list">
+            {about.badges.map((badge) => (
+              <li
+                key={badge}
+                className="rounded-full border border-border bg-white px-4 py-2 text-xs font-medium text-ink-muted shadow-soft sm:text-sm"
+              >
+                {badge}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

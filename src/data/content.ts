@@ -1,20 +1,32 @@
 export const hero = {
-  title: "Logopeda",
+  eyebrow: "CONSULTA Y ACOMPAÑAMIENTO",
+  title: "Ayudo a niños y adultos a mejorar su comunicación y lenguaje.",
   subtitle:
-    "Acompañamiento en lenguaje y comunicación, adaptado a cada persona.",
+    "Evaluación y acompañamiento personalizado en dificultades del habla, lenguaje, comunicación y aprendizaje.",
+  benefits: [
+    "Atención personalizada",
+    "Enfoque cercano e integral",
+    "Acompañamiento claro y respetuoso",
+  ],
 };
 
 export const about = {
   title: "Sobre mí",
   paragraphs: [
-    "Me formé como Licenciada en Fonoaudiología en Cuba y desde entonces he ido construyendo mi experiencia profesional en distintos países.",
-    "Trabajé durante varios años en Uruguay, acompañando a niños y adultos en dificultades relacionadas con la audición, el lenguaje y la comunicación.",
-    "Actualmente vivo en España, donde continúo formándome mientras realizo el proceso de homologación como logopeda.",
-    "Este recorrido me ha permitido desarrollar una forma de trabajar flexible y adaptada a cada persona, siempre desde la cercanía, la claridad y el respeto.",
+    "Soy Licenciada en Fonoaudiología, formada en Cuba, con experiencia profesional en Uruguay y actualmente en proceso de homologación como logopeda en España.",
+    "A lo largo de mi recorrido he acompañado a niños y adultos con dificultades relacionadas con el lenguaje, el habla, la audición y la comunicación.",
+    "Mi forma de trabajar se basa en la escucha, la claridad y la adaptación a las necesidades de cada persona.",
+  ],
+  badges: [
+    "Formación en Fonoaudiología",
+    "Experiencia con niños y adultos",
+    "Atención cercana y personalizada",
   ],
 };
 
 export type EducationItem = { period: string; title: string; place: string };
+export const educationIntro =
+  "Mi formación me ha permitido construir una base sólida para comprender e intervenir en diferentes dificultades del lenguaje, el habla y la comunicación.";
 
 export const education: EducationItem[] = [
   {
@@ -39,6 +51,9 @@ export type ExperienceItem = {
   summary: string;
 };
 
+export const experienceIntro =
+  "Mi experiencia en distintos centros me ha permitido trabajar con necesidades muy diversas, desde dificultades del lenguaje y el habla hasta rehabilitación auditiva y comunicación aumentativa.";
+
 export const experience: ExperienceItem[] = [
   {
     id: "penarol",
@@ -46,7 +61,7 @@ export const experience: ExperienceItem[] = [
     institution: "Clínica Peñarol",
     role: "Fonoaudióloga",
     summary:
-      "Evaluación, diagnóstico y tratamiento de las alteraciones del lenguaje y habla.",
+      "Acompañamiento en dificultades del lenguaje, habla y comunicación, con evaluación e intervención adaptada a cada caso.",
   },
   {
     id: "centro-oeste",
@@ -54,7 +69,7 @@ export const experience: ExperienceItem[] = [
     institution: "Clínica Centro Oeste",
     role: "Fonoaudióloga",
     summary:
-      "Evaluación, diagnóstico y tratamiento de las alteraciones del lenguaje y habla.",
+      "Trabajo con niños y adultos en procesos de evaluación, diagnóstico e intervención para mejorar la comunicación funcional.",
   },
   {
     id: "cipres",
@@ -62,7 +77,7 @@ export const experience: ExperienceItem[] = [
     institution: "Centro Clínico de Reeducación Auditiva y del Lenguaje (CIPRES)",
     role: "Fonoaudióloga",
     summary:
-      "Evaluación, diagnóstico y tratamiento de las alteraciones del lenguaje, habla y voz. Rehabilitación de Implante Coclear. Terapia auditivo verbal.",
+      "Experiencia en rehabilitación auditiva, implante coclear y terapia auditivo-verbal, además de intervención en lenguaje, habla y voz.",
   },
   {
     id: "franklin",
@@ -70,7 +85,7 @@ export const experience: ExperienceItem[] = [
     institution: "Escuela “Franklin Delano Roosevelt”",
     role: "Fonoaudióloga",
     summary:
-      "Rehabilitación de niños con patologías neurológicas. Sistemas aumentativos y alternativos de comunicación. Terapia de deglución.",
+      "Apoyo a niños con necesidades neurológicas, uso de sistemas aumentativos y alternativos de comunicación y acompañamiento en deglución.",
   },
   {
     id: "caif",
@@ -78,7 +93,7 @@ export const experience: ExperienceItem[] = [
     institution: "CAIF “Gruta de Lourdes”",
     role: "Fonoaudióloga",
     summary:
-      "Actividades de prevención, evaluación, diagnóstico y tratamiento de patologías del lenguaje, habla, voz y audición.",
+      "Prevención e intervención temprana en lenguaje, habla, voz y audición para favorecer el desarrollo comunicativo.",
   },
   {
     id: "chiqui-gomez",
@@ -86,21 +101,98 @@ export const experience: ExperienceItem[] = [
     institution: "Policlínica Provincial de Logopedia y Foniatría “Chiqui Gómez”",
     role: "Fonoaudióloga",
     summary:
-      "Prevención, evaluación, diagnóstico y tratamiento en niños y adultos con trastornos en lenguaje, habla, voz y audición.",
+      "Trabajo clínico con niños y adultos en prevención, evaluación e intervención de trastornos del lenguaje, habla, voz y audición.",
   },
 ];
 
-/** Patologías y ámbitos: listado plano (orden de presentación) */
-export const workAreaPathologies = [
-  "Hablante tardío",
-  "Trastorno del Desarrollo del Lenguaje",
-  "Trastorno de los Sonidos del Habla",
-  "Apraxia del habla infantil",
-  "Disartria",
-  "Trastornos de la fluidez",
-  "Trastorno del Espectro Autista",
-  "Trastorno específico del aprendizaje",
-] as const;
+export type AreaIntervencionItem = {
+  id: string;
+  titulo: string;
+  descripcion: string;
+  bullets: [string, string];
+};
+
+export const areasIntervencionIntro =
+  "Acompaño a niños, adolescentes y adultos en dificultades relacionadas con el lenguaje, el habla, la comunicación, el aprendizaje y la fluidez.";
+
+export const areasIntervencion: AreaIntervencionItem[] = [
+  {
+    id: "tdl",
+    titulo: "Trastorno del Desarrollo del Lenguaje (TDL)",
+    descripcion: "Dificultad persistente para comprender o expresar el lenguaje oral.",
+    bullets: [
+      "Puede costar formar frases, comprender instrucciones o ampliar vocabulario.",
+      "La intervención mejora la comprensión y la expresión del lenguaje.",
+    ],
+  },
+  {
+    id: "tsh",
+    titulo: "Trastorno de los sonidos del habla (TSH)",
+    descripcion: "Dificultad para producir correctamente algunos sonidos del habla.",
+    bullets: [
+      "Pueden aparecer sustituciones, omisiones o distorsiones de sonidos.",
+      "La intervención favorece una articulación más clara y precisa.",
+    ],
+  },
+  {
+    id: "apraxia",
+    titulo: "Apraxia del habla infantil",
+    descripcion: "Alteración motora que dificulta planificar los movimientos necesarios para hablar.",
+    bullets: [
+      "Puede haber errores inconsistentes o dificultad para iniciar palabras.",
+      "La intervención trabaja planificación, coordinación y claridad del habla.",
+    ],
+  },
+  {
+    id: "disartria",
+    titulo: "Disartria",
+    descripcion:
+      "Dificultad para articular palabras por alteraciones en el control muscular del habla.",
+    bullets: [
+      "Puede notarse habla lenta, imprecisa o con volumen bajo.",
+      "La intervención busca mejorar claridad e inteligibilidad.",
+    ],
+  },
+  {
+    id: "fluidez",
+    titulo: "Trastornos de la fluidez",
+    descripcion:
+      "Alteraciones como tartamudez, bloqueos o repeticiones que afectan el ritmo del habla.",
+    bullets: [
+      "Pueden aparecer repeticiones, prolongaciones o bloqueos.",
+      "La intervención ayuda a comunicarse con más seguridad y fluidez.",
+    ],
+  },
+  {
+    id: "tea",
+    titulo: "Trastorno del Espectro Autista (TEA)",
+    descripcion:
+      "Acompañamiento en comunicación, lenguaje, interacción social y uso funcional del lenguaje.",
+    bullets: [
+      "Puede haber dificultades en comunicación social o flexibilidad del lenguaje.",
+      "La intervención potencia habilidades comunicativas y sociales.",
+    ],
+  },
+  {
+    id: "hablante-tardio",
+    titulo: "Hablante tardío",
+    descripcion: "Niños que comienzan a hablar más tarde de lo esperado para su edad.",
+    bullets: [
+      "Puede haber menor cantidad de palabras o frases.",
+      "La intervención estimula el lenguaje y la comunicación temprana.",
+    ],
+  },
+  {
+    id: "aprendizaje",
+    titulo: "Trastorno específico del aprendizaje",
+    descripcion:
+      "Dificultades persistentes en lectura, escritura o habilidades relacionadas con el aprendizaje.",
+    bullets: [
+      "Puede haber dificultad para leer, escribir o comprender textos.",
+      "La intervención fortalece habilidades académicas y cognitivas.",
+    ],
+  },
+];
 
 export type BlogPost = {
   slug: string;

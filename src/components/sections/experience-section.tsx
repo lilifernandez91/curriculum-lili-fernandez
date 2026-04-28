@@ -1,4 +1,4 @@
-import { experience } from "@/data/content";
+import { experience, experienceIntro } from "@/data/content";
 
 export function ExperienceSection() {
   return (
@@ -7,15 +7,20 @@ export function ExperienceSection() {
         <p className="text-center text-xs font-semibold uppercase tracking-[0.24em] text-forest">
           Experiencia
         </p>
-        <h2 className="mt-2 text-center text-5xl leading-none text-ink sm:text-6xl">Recorrido profesional</h2>
+        <h2 className="mt-2 text-center text-3xl leading-tight text-ink sm:text-4xl">
+          Recorrido profesional
+        </h2>
+        <p className="mx-auto mt-4 max-w-3xl text-center text-sm leading-relaxed text-ink-muted sm:text-base">
+          {experienceIntro}
+        </p>
         <ul className="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3" role="list">
           {experience.slice(0, 6).map((e) => (
             <li
               key={e.id}
-              className="rounded-3xl border border-border bg-white p-5 shadow-soft hover:shadow-card"
+              className="rounded-3xl border border-border bg-white p-5 shadow-soft transition-shadow duration-300 hover:shadow-card"
             >
               <p className="text-xs font-semibold uppercase tracking-widest text-terracotta">{e.period}</p>
-              <h3 className="mt-2 text-2xl leading-tight text-ink">{e.institution}</h3>
+              <h3 className="mt-2 text-xl leading-snug text-ink sm:text-2xl">{e.institution}</h3>
               <p className="mt-1 text-sm font-semibold text-forest">{e.role}</p>
               <p className="mt-3 text-sm leading-relaxed text-ink-muted">{e.summary}</p>
             </li>

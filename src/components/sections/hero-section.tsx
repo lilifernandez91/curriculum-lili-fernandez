@@ -6,9 +6,9 @@ import { site } from "@/data/site";
 
 export function HeroSection() {
   const benefits = [
-    { icon: BadgeCheck, label: "Atención personalizada" },
-    { icon: Sparkles, label: "Enfoque integral" },
-    { icon: HeartHandshake, label: "Acompañamiento cercano y respetuoso" },
+    { icon: BadgeCheck, label: hero.benefits[0] },
+    { icon: Sparkles, label: hero.benefits[1] },
+    { icon: HeartHandshake, label: hero.benefits[2] },
   ] as const;
 
   return (
@@ -20,22 +20,26 @@ export function HeroSection() {
       <div className="mx-auto grid w-full max-w-6xl items-center gap-10 lg:grid-cols-[1fr_0.92fr] lg:gap-12">
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.24em] text-terracotta">
-            Consulta y acompañamiento
+            {hero.eyebrow}
           </p>
-          <h1 className="mt-3 text-6xl leading-[0.95] text-ink sm:text-7xl lg:text-8xl">{hero.title}</h1>
+          <h1 className="mt-3 max-w-2xl text-balance text-4xl leading-tight text-ink sm:text-5xl lg:text-6xl">
+            {hero.title}
+          </h1>
           <span className="mt-3 block h-1 w-20 rounded-full bg-terracotta/90" aria-hidden />
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-ink-muted">{hero.subtitle}</p>
+          <p className="mt-5 max-w-xl text-sm leading-relaxed text-ink-muted sm:text-base">
+            {hero.subtitle}
+          </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
             <Link
               href={`mailto:${site.email}`}
-              className="inline-flex min-h-11 items-center justify-center rounded-full bg-terracotta px-6 py-3 text-sm font-semibold text-white shadow-soft hover:-translate-y-0.5 hover:bg-[#b86242]"
+              className="inline-flex min-h-11 items-center justify-center rounded-full bg-terracotta px-7 py-3 text-sm font-semibold text-white shadow-card hover:-translate-y-0.5 hover:bg-[#b86242] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-terracotta"
             >
-              Agenda tu consulta
+              Escríbeme un email
             </Link>
             <Link
               href="/#sobre-mi"
-              className="inline-flex min-h-11 items-center justify-center rounded-full border border-terracotta px-6 py-3 text-sm font-semibold text-terracotta hover:-translate-y-0.5 hover:bg-terracotta/10"
+              className="inline-flex min-h-11 items-center justify-center rounded-full border border-terracotta px-6 py-3 text-sm font-semibold text-terracotta hover:-translate-y-0.5 hover:bg-terracotta/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta/70 focus-visible:ring-offset-2"
             >
               Conóceme mejor
             </Link>
