@@ -11,7 +11,6 @@ export const hero = {
 };
 
 export const about = {
-  title: "Sobre mí",
   paragraphs: [
     "Soy Licenciada en Fonoaudiología, formada en Cuba, con experiencia profesional en Uruguay y actualmente en proceso de homologación como logopeda en España.",
     "A lo largo de mi recorrido he acompañado a niños y adultos con dificultades relacionadas con el lenguaje, el habla, la audición y la comunicación.",
@@ -198,26 +197,26 @@ export type BlogPost = {
   slug: string;
   title: string;
   date: string;
-  /** Resumen corto opcional bajo el título */
-  excerpt?: string;
-  /** Texto largo opcional bajo el resumen */
-  body?: string;
+  coverImage: string;
   /** Enlace a PDF en Google Drive (vista o descarga) */
   pdfUrl: string;
 };
 
 export const blogPosts: BlogPost[] = [
   {
-    slug: "guia-bebre-0-12-meses",
-    title: "Guía práctica para acompañar el desarrollo de tu bebé (0–12 meses)",
-    date: "2025-10-10",
+    slug: "guia-bebe-0-12-meses",
+    title:
+      "Actividades sencillas para estimular el desarrollo del bebé en casa (0–12 meses)",
+    date: "10 de abril de 2026",
+    coverImage: "/images/materiales/guia-bebe-0-12.png",
     pdfUrl:
       "https://drive.google.com/file/d/13TBCQtbBoCwl9SrqTt8DclRVEUBnCV22/view?usp=sharing",
   },
   {
     slug: "estimulacion-1-3-anos",
     title: "Cómo estimular el desarrollo infantil (1–3 años)",
-    date: "2025-11-05",
+    date: "24 de abril de 2026",
+    coverImage: "/images/materiales/guia-desarrollo-1-3.png",
     pdfUrl:
       "https://drive.google.com/file/d/180h_LS_eqDgU-KJW34tHqRGgnD9-6GFb/view?usp=sharing",
   },

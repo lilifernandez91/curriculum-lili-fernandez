@@ -1,69 +1,52 @@
-"use client";
-
-import { useState } from "react";
+import Image from "next/image";
 import type { BlogPost } from "@/data/content";
-import { DrivePdfThumbnail } from "@/components/drive-pdf-thumbnail";
-import { extractGoogleDriveFileId } from "@/lib/google-drive";
 
 type Props = {
   post: BlogPost;
 };
 
 export function BlogPostCard({ post: p }: Props) {
-  const fileId = extractGoogleDriveFileId(p.pdfUrl);
-  const [showThumb, setShowThumb] = useState(!!fileId);
-
   return (
     <article
       id={p.slug}
-      className="flex w-full flex-1 flex-col overflow-hidden rounded-lg border border-terracotta/20 bg-white/95 shadow-sm md:flex-row md:items-stretch"
+      className="flex h-full w-full flex-col gap-3 rounded-3xl border border-[#174F43]/10 bg-[#FFFDF9] p-3.5 shadow-[0_14px_35px_-24px_rgba(23,79,67,0.45)] sm:p-4 md:flex-row md:items-stretch md:gap-4"
     >
-      {fileId && showThumb ? (
+      <a
+        href={p.pdfUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mx-auto block w-[66%] shrink-0 sm:w-[44%] md:mx-0 md:w-40 lg:w-44"
+        aria-label={`Abrir PDF: ${p.title}`}
+      >
         <div
-          className="relative flex min-h-[220px] w-full shrink-0 flex-col border-b border-line/40 sm:min-h-[240px] md:min-h-full md:max-w-sm md:min-w-[12rem] md:w-2/5 md:shrink-0 md:overflow-hidden md:self-stretch md:border-b-0 md:border-r md:border-line/30"
+          className="-rotate-[2.5deg] aspect-[3/4] overflow-hidden rounded-2xl border border-[#174F43]/10 bg-[#FBF7F1] shadow-[0_12px_30px_-20px_rgba(43,30,24,0.55)] transition hover:-translate-y-0.5 hover:rotate-0"
         >
-          <DrivePdfThumbnail
-            fileId={fileId}
-            title={p.title}
-            pdfUrl={p.pdfUrl}
-            variant="side"
-            onLoadFail={() => setShowThumb(false)}
+          <Image
+            src={p.coverImage}
+            alt={`Portada de ${p.title}`}
+            width={420}
+            height={620}
+            className="h-full w-full object-cover"
           />
         </div>
-      ) : null}
+      </a>
 
-      <div
-        className={`flex min-w-0 flex-1 flex-col justify-between gap-2.5 p-2.5 sm:p-3 ${
-          fileId && showThumb ? "" : "w-full"
-        }`}
-      >
-        <div className="min-w-0 space-y-1.5">
-          <p className="text-[10px] font-medium text-ink-muted sm:text-xs">
-            {new Date(p.date).toLocaleDateString("es-ES", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })}
-          </p>
+      <div className="flex h-full min-w-0 flex-1 flex-col justify-between gap-3">
+        <div className="space-y-2">
+          <p className="text-xs font-medium tracking-wide text-[#2B1E18]/60">{p.date}</p>
           <h2
-            className="text-balance font-serif text-sm font-semibold leading-snug text-forest sm:text-base"
+            className="font-serif text-lg font-semibold leading-snug text-[#174F43] break-words sm:text-xl"
           >
             {p.title}
           </h2>
-          {p.excerpt?.trim() ? (
-            <p className="text-sm text-ink-muted">{p.excerpt}</p>
-          ) : null}
-          {p.body?.trim() ? (
-            <p className="text-sm leading-relaxed text-ink/90">{p.body}</p>
-          ) : null}
         </div>
         <a
           href={p.pdfUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex min-h-8 w-full shrink-0 items-center justify-center rounded-full bg-gradient-to-r from-forest to-accent px-2.5 py-1.5 text-xs font-semibold text-white shadow-sm transition sm:w-auto sm:min-w-0 sm:py-2 sm:text-sm sm:hover:from-accent sm:hover:to-accent-bright"
+          className="inline-flex h-10 w-full items-center justify-center rounded-full bg-[#174F43] px-4 text-sm font-semibold text-[#FFFDF9] shadow-[0_10px_26px_-18px_rgba(23,79,67,0.8)] transition hover:bg-[#123d34]"
         >
-          Abrir PDF en Google Drive
+          Ver guía PDF
         </a>
       </div>
     </article>

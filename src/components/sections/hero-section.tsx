@@ -2,7 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { BadgeCheck, HeartHandshake, Sparkles } from "lucide-react";
 import { hero } from "@/data/content";
-import { site } from "@/data/site";
 
 export function HeroSection() {
   const benefits = [
@@ -32,10 +31,10 @@ export function HeroSection() {
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
             <Link
-              href={`mailto:${site.email}`}
+              href="/#contacto"
               className="inline-flex min-h-11 items-center justify-center rounded-full bg-terracotta px-7 py-3 text-sm font-semibold text-white shadow-card hover:-translate-y-0.5 hover:bg-[#b86242] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-terracotta"
             >
-              Escríbeme un email
+              Contáctame
             </Link>
             <Link
               href="/#sobre-mi"
@@ -65,7 +64,7 @@ export function HeroSection() {
           <div className="absolute -right-3 bottom-3 h-28 w-28 rounded-full bg-terracotta-light/40 blur-xl" aria-hidden />
           <div className="relative overflow-hidden rounded-[3rem_7rem_3rem_7rem] border border-border/80 bg-section-soft p-3 shadow-card sm:rounded-[4rem_9rem_4rem_9rem]">
             <Image
-              src="/images/hero-therapy.svg"
+              src="/images/hero-therapy-photo.png"
               alt="Terapeuta en consulta con ambiente cálido y profesional"
               width={920}
               height={1150}

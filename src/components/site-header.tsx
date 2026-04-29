@@ -61,7 +61,7 @@ export function SiteHeader() {
             className="inline-flex items-center gap-2 rounded-full border border-forest/35 px-4 py-2 text-sm font-semibold text-forest-deep hover:-translate-y-0.5 hover:border-terracotta hover:text-terracotta"
           >
             <Download className="h-4 w-4" />
-            Guías en PDF
+            Blog
           </Link>
         </div>
 
@@ -98,7 +98,7 @@ export function SiteHeader() {
             className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-full border border-forest/35 px-4 py-2.5 text-sm font-semibold text-forest-deep"
           >
             <Download className="h-4 w-4" />
-            Guías en PDF
+            Blog
           </Link>
         </nav>
       </div>

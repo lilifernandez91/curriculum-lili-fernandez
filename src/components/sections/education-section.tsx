@@ -1,5 +1,6 @@
 import { education, educationIntro } from "@/data/content";
 import { GraduationCap } from "lucide-react";
+import { SectionHeading } from "@/components/section-heading";
 
 export function EducationSection() {
   return (
@@ -10,9 +11,14 @@ export function EducationSection() {
     >
       <div className="mx-auto w-full max-w-6xl">
         <div className="mx-auto max-w-3xl text-center">
-          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-forest">Educación</p>
-          <h2 className="mt-2 text-3xl leading-tight text-ink sm:text-4xl">Base académica y formación</h2>
-          <span className="mx-auto mt-3 block h-1 w-14 rounded-full bg-terracotta/90" aria-hidden />
+          <SectionHeading
+            eyebrow="EDUCACIÓN"
+            title="Formación académica y actualización profesional"
+            align="center"
+            eyebrowClassName="text-forest"
+            titleClassName="text-ink"
+            dividerClassName="bg-terracotta/90"
+          />
           <p className="mt-4 text-sm leading-relaxed text-ink-muted sm:text-base">{educationIntro}</p>
         </div>
 

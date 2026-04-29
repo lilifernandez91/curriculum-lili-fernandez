@@ -10,6 +10,7 @@ import {
   Workflow,
 } from "lucide-react";
 import { areasIntervencion, areasIntervencionIntro } from "@/data/content";
+import { SectionHeading } from "@/components/section-heading";
 
 const AREA_ICONOS: Record<string, LucideIcon> = {
   tdl: MessageCircleMore,
@@ -30,13 +31,13 @@ export function AreasIntervencion() {
       className="scroll-mt-28 bg-[#f5f1ed] px-4 py-14 sm:px-6 lg:py-20"
     >
       <div className="mx-auto w-full max-w-6xl">
-        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-[#e9a47a]">
-          ÁREAS DE INTERVENCIÓN
-        </p>
-        <h2 className="mt-2 max-w-3xl text-balance text-2xl leading-tight text-ink sm:text-3xl lg:text-4xl">
-          Acompaño cada forma de comunicarse
-        </h2>
-        <span className="mt-3 block h-1 w-16 rounded-full bg-[#e9a47a]" aria-hidden />
+        <SectionHeading
+          eyebrow="ÁREAS DE INTERVENCIÓN"
+          title="Acompaño cada forma de comunicarse"
+          eyebrowClassName="text-[#e9a47a]"
+          titleClassName="max-w-3xl text-balance text-ink"
+          dividerClassName="bg-[#e9a47a]"
+        />
         <p className="mt-4 max-w-3xl text-sm leading-relaxed text-ink-muted sm:text-base">
           {areasIntervencionIntro}
         </p>

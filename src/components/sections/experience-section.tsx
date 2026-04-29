@@ -1,15 +1,18 @@
 import { experience, experienceIntro } from "@/data/content";
+import { SectionHeading } from "@/components/section-heading";
 
 export function ExperienceSection() {
   return (
     <section id="experiencia" aria-label="Experiencia" className="scroll-mt-28 bg-canvas px-4 py-14 sm:px-6 lg:py-20">
       <div className="mx-auto w-full max-w-6xl">
-        <p className="text-center text-xs font-semibold uppercase tracking-[0.24em] text-forest">
-          Experiencia
-        </p>
-        <h2 className="mt-2 text-center text-3xl leading-tight text-ink sm:text-4xl">
-          Recorrido profesional
-        </h2>
+        <SectionHeading
+          eyebrow="EXPERIENCIA"
+          title="Recorrido profesional y acompañamiento clínico"
+          align="center"
+          eyebrowClassName="text-forest"
+          titleClassName="text-ink"
+          dividerClassName="bg-terracotta/90"
+        />
         <p className="mx-auto mt-4 max-w-3xl text-center text-sm leading-relaxed text-ink-muted sm:text-base">
           {experienceIntro}
         </p>
