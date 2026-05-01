@@ -60,8 +60,15 @@ export function SiteHeader() {
             href="/blog"
             className="inline-flex items-center gap-2 rounded-full border border-forest/35 px-4 py-2 text-sm font-semibold text-forest-deep hover:-translate-y-0.5 hover:border-terracotta hover:text-terracotta"
           >
-            <Download className="h-4 w-4" />
             Blog
+          </Link>
+          <Link
+            href="/curriculum-lili-fernandez.pdf"
+            download="Curriculum-Lili-Fernandez.pdf"
+            className="inline-flex items-center gap-2 rounded-full border border-forest/35 px-4 py-2 text-sm font-semibold text-forest-deep hover:-translate-y-0.5 hover:border-terracotta hover:text-terracotta"
+          >
+            <Download className="h-4 w-4" />
+            Descargar currículum
           </Link>
         </div>
 
@@ -92,14 +99,24 @@ export function SiteHeader() {
               {l.label}
             </Link>
           ))}
-          <Link
-            href="/blog"
-            onClick={() => setOpen(false)}
-            className="mt-2 inline-flex w-full items-center justify-center gap-2 rounded-full border border-forest/35 px-4 py-2.5 text-sm font-semibold text-forest-deep"
-          >
-            <Download className="h-4 w-4" />
-            Blog
-          </Link>
+          <div className="mt-2 grid grid-cols-2 gap-2">
+            <Link
+              href="/blog"
+              onClick={() => setOpen(false)}
+              className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-forest/35 px-3 py-2 text-sm font-semibold text-forest-deep"
+            >
+              Blog
+            </Link>
+            <Link
+              href="/curriculum-lili-fernandez.pdf"
+              download="Curriculum-Lili-Fernandez.pdf"
+              onClick={() => setOpen(false)}
+              className="inline-flex w-full items-center justify-center gap-1.5 rounded-full border border-forest/35 px-2.5 py-2 text-xs font-semibold text-forest-deep sm:text-sm"
+            >
+              <Download className="h-4 w-4" />
+              <span className="whitespace-nowrap">Descargar currículum</span>
+            </Link>
+          </div>
         </nav>
       </div>
     </header>
