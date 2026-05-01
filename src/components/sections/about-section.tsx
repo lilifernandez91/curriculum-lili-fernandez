@@ -21,7 +21,7 @@ export function AboutSection() {
         <div className="max-w-3xl">
           <SectionHeading
             eyebrow="SOBRE MÍ"
-            title="Conóceme un poco mejor"
+            title="Conóceme mejor"
             eyebrowClassName="text-terracotta"
             titleClassName="text-ink"
             dividerClassName="bg-terracotta/90"
