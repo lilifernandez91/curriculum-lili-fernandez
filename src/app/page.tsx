@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { AboutSection } from "@/components/sections/about-section";
 import { AreasIntervencion } from "@/components/sections/AreasIntervencion";
 import { ContactSection } from "@/components/sections/contact-section";
-import { CurriculumSection } from "@/components/sections/curriculum-section";
 import { EducationSection } from "@/components/sections/education-section";
 import { ExperienceSection } from "@/components/sections/experience-section";
 import { HeroSection } from "@/components/sections/hero-section";
@@ -73,7 +72,6 @@ export default function HomePage() {
       <EducationSection />
       <ExperienceSection />
       <AreasIntervencion />
-      <CurriculumSection />
       <ContactSection />
     </main>
   );
